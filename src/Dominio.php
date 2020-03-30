@@ -28,13 +28,13 @@ final Class Dominio {
     /** Retire espaços em branco da string */
     public function retiraEspacos() {
         $formater = str_replace(' ', '',$this->dominio);
-        return $formater;
-
+        return $formater; 
+        
     }
 
     /** Valida quantidade minima de 2 caracteres */
     public function minimoCaracteres() {
-        if (strlen($this->dominio) > 2) {
+        if (strlen($this->dominio) < 2) {
             return false;
         }
 
@@ -43,7 +43,7 @@ final Class Dominio {
 
     /** Valida quantidade maxima de 26 caracteres */
     public function maximoCaracteres() {
-        if (strlen($this->dominio) < 26) {
+        if (strlen($this->dominio) > 26) {
             return false;
         }
 
